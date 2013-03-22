@@ -1,7 +1,7 @@
 Package: MatchImage
 Version: 0.1
 Date: 2013/03/21
-Depends: R (>= 2.15.2), ReadImages
+Depends: ReadImages
 Title: likelihood-based image id code
 Author: Jerod A. Merkle
 Maintainer: Jerod A. Merkle <jerod.merkle.1@ulaval.ca>
