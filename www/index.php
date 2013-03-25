@@ -195,7 +195,7 @@
                                                                 <br><span style="font-size:12px;">
                                                                 <b>Likelihood-based photograph identification: application with photographs of free-ranging bison</b><br>
                                                                 <span style="font-size:9px;">Jerod A. Merkle<sup>1,2</sup>, Daniel Fortin<sup>1</sup><br>
-                                                                <sup>1</sup>Natural Resources Institute, University of Manitoba, Winnipeg, Manitoba, Canada<br>
+                                                                <sup>1</sup>Département de Biologie, Université Laval, Québec, Canada<br>
                                                                 <sup>2</sup>Email: <a href="mailto:jerod.merkle.1@ulaval.ca">jerod.merkle.1@ulaval.ca</a>, Web: <a href="http://www.cef-cfr.ca/">http://www.cef-cfr.ca/</a><br><br>
                                                                 </span>
                                                                 <br>
