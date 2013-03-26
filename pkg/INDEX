@@ -1,5 +1,0 @@
-lpic                    Computer-assisted method for assigning animal ids to 
-			a database of images using phenotypic measurements 
-			extracted from each image.  Method is based on likelihood 
-			theory, and can handle multiple sources of error inherit 
-			in image identification.
