@@ -21,6 +21,7 @@ License: \tab GPL (>= 2)\cr
 Index:
 \preformatted{
 lpic           		match a collection of images based on morphological measurements
+calErr			Find SDs and weights for lpic based on a sample of measured images
 }
 }
 \author{
@@ -31,8 +32,6 @@ Maintainer: Jerod A. Merkle <jerod.merkle.1@ulaval.ca>
 No references
 }
 \keyword{ package }
-\seealso{
-}
 \examples{
-lpic works like this: lpic(base = base, pics = "pics", sd = sd, wt = wt, preface = "f")
+#lpic works like this: lpic(base = base, pics = "pics", sd = sd, wt = wt, preface = "f")
 }

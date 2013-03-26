@@ -2,10 +2,10 @@
 \alias{lpic}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Assigns animal ids to a database of photographs using phenotypic measurements of each photograph.
+Likelihood-based Image Identification Code
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Assigns animal ids to a database of photographs using phenotypic measurements of each photograph.
 }
 \usage{
 lpic(base = base, sd = sd, wt = wt, pics = "pics", preface = "f")
@@ -108,13 +108,12 @@ Jerod A. Merkle (jerod.merkle.1@ulaval.ca)
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\code{\link{calcErr}}
 }
 \examples{
+\dontrun{
 #example code for lpic
-#First thing, copy lpic.R into your working directory
-setwd("C:/…")  #set your working directory
-install.packages ("ReadImages")
+require("ReadImages")
 
 #create pics folder within wd
 dir.create(paste(getwd(), "images", sep = "/"))
@@ -140,9 +139,6 @@ base <- data.frame(id, photo_name, info, m1, m2, m3, stringsAsFactors = FALSE)
 std.dev <- c(30, .2, 2)
 weights <- c(1, 1, 1)
 
-#bring lpic() into R environment
-source(paste(getwd(), "/lpic.R", sep = ""))
-
 #run lpic() with the example dataset
 example <- lpic(base = base, pics = "images", sd = std.dev, wt = weights, preface = "test")
 
@@ -156,7 +152,8 @@ nrow(unique(example[[1]][1]))
 table(example[[1]][1])
 
 }
+}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ image analysis }
+\keyword{ animal matching }
