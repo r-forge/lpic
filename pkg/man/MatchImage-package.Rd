@@ -14,7 +14,7 @@ Computer-assisted method for assigning animal ids to a database of
 Package: \tab lpic\cr
 Version: \tab 0.1\cr
 Date: \tab 2013/03/21\cr
-Depends: \tab R (>= 2.15.1), ReadImages\cr
+Depends: \tab R (>= 2.15.1), jpeg\cr
 License: \tab GPL (>= 2)\cr
 }
 

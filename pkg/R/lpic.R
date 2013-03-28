@@ -1,7 +1,7 @@
 lpic <- function(base = base, sd = sd, wt = wt, pics = "pics", preface = "f") {
   #some checks to make sure the data are in the right shape
-  if("ReadImages" %in% installed.packages()[,1] == FALSE) stop("must require package ReadImages")
-  require("ReadImages")
+  if("jpeg" %in% installed.packages()[,1] == FALSE) stop("must install package jpeg")
+  require("jpeg")
   if(ncol(base)-3 != length(sd)) 
     stop("length of sd does not equal number of measurements")
   if(ncol(base)-3 != length(wt)) 
@@ -61,17 +61,22 @@ lpic <- function(base = base, sd = sd, wt = wt, pics = "pics", preface = "f") {
     u <- if(length(unique(data$photo_name)) > 5) {
       as.character(unique(data$photo_name[1:5]))
     } else(as.character(unique(data$photo_name))) 
-    par(mfrow = c(2,3), family = "serif", mai = c(.2, .2, .2, .2),
+    par(mfrow=c(2,3), family = "serif", mai = c(.2, .2, .2, .2),
         mar = c(1, 1, 1, 1), omi = c(.1, .1, .1, .1), oma = c(0, 0, 0, 0))
-    plot.imagematrix(read.jpeg(paste(getwd(), "/", pics, "/", 
-        data$photo_name_b[1], ".JPG", sep = "")), 
-        main = paste("New:",data$photo_name_b[1], ", ",  
-        data$info_b[1], sep = " "))
+    img1 <- readJPEG(paste(getwd(), "/", pics, "/", 
+                           data$photo_name_b[1], ".JPG", sep = ""))
+    dim1 <- ((dim(img1)[1]/dim(img1)[2])*800)
+    dim1 <- ifelse(dim1 >800, 800, dim1)
+    plot(c(0, 1000), c(0, 800), type = "n", xlab="", ylab="", axes=FALSE, 
+         main = paste("New:",data$photo_name_b[1], ", ",  
+                      data$info_b[1], sep = " "))
+    rasterImage(img1, 0, 0, 1000, dim1)           
     for(a in 1:length(u)) {
-        plot.imagematrix(read.jpeg(paste(getwd(), "/", pics, "/", 
-        data$photo_name[a], ".JPG", sep = "")), 
-        main = paste("#", a, ", ", preface, data$id[a], ", Scr=",  
-        signif(data$score[a], 3), ", ", data$info[a], sep = ""))  
+      plot(c(0, 1000), c(0, 800), type = "n", xlab="", ylab="", axes=FALSE, 
+           main = paste("#", a, ", ", preface, data$id[a], ", Scr=",  
+                        signif(data$score[a], 3), ", ", data$info[a], sep = ""))
+      rasterImage(readJPEG(paste(getwd(), "/", pics, "/", 
+                 data$photo_name[a], ".JPG", sep = "")), 0, 0, 1000, dim1)  
     }
     print(c(paste("Pic ", i, " of ", nrow(base), " : ", 
         "Identify whether or not the new animal has a match.", sep = ""),

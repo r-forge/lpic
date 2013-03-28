@@ -107,23 +107,23 @@ Jerod A. Merkle (jerod.merkle.1@ulaval.ca)
 \examples{
 \dontrun{
 #example code for lpic
-require(ReadImages)
+library(jpeg)
 
 #create pics folder within wd
-dir.create(paste(getwd(), images, sep = /))
+dir.create(paste(getwd(), "images", sep = "/"))
 
 #copy some example photos into your pics folder
-file.copy(system.file(extdata, Rlogo.jpg, package=ReadImages), 
-paste(getwd(),/images/, Rlogo1.JPG, sep = ))
+file.copy(system.file("img", "Rlogo.JPG", package="jpeg"), 
+paste(getwd(),"/images/", "Rlogo1.JPG", sep = ""))
 for(i in 2:6){
-  file.copy(paste(getwd(), /images/Rlogo1.JPG, sep = ), 
-            paste(getwd(), /images/Rlogo, i, .JPG, sep = )) 
+  file.copy(paste(getwd(), "/images/Rlogo1.JPG", sep = ""), 
+            paste(getwd(), "/images/Rlogo", i, ".JPG", sep = "")) 
 }
 
 #generate columns for the base dataframe
 id <- c(1, rep(NA, times = 5))  
-photo_name <- substr(dir(paste(getwd(), images, sep = /)), start = 1, stop = 6)
-info <- rep(userinfo, times = 6)
+photo_name <- substr(dir(paste(getwd(), "images", sep = "/")), start = 1, stop = 6)
+info <- rep("userinfo", times = 6)
 m1 <- rnorm(6, 200, 30)  # 3 random measurements for each image
 m2 <- rnorm(6, 5, .2)
 m3 <- rnorm(6, 20, 2)
@@ -133,8 +133,9 @@ base <- data.frame(id, photo_name, info, m1, m2, m3, stringsAsFactors = FALSE)
 std.dev <- c(30, .2, 2)
 weights <- c(1, 1, 1)
 
+
 #run lpic() with the example dataset
-example <- lpic(base = base, pics = images, sd = std.dev, wt = weights, preface = test)
+example <- lpic(base = base, pics = "images", sd = std.dev, wt = weights, preface = "test")
 
 #quickly look at main results:
 head(example[[1]], 10)
