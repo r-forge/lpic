@@ -1,7 +1,7 @@
 Package: MatchImage
 Type: Package
 Version: 0.1
-Date: 2013/03/26
+Date: 2013/05/12
 Depends: jpeg
 Title: likelihood-based image id code
 Author: Jerod A. Merkle, Daniel Fortin
