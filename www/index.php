@@ -2,7 +2,15 @@
 <!-- This is the project specific website template -->
 <!-- It can be changed as liked or replaced by other content -->
 
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html
+<?php
+
+$domain=ereg_replace('[^\.]*\.(.*)$','\1',$_SERVER['HTTP_HOST']);
+$group_name=ereg_replace('([^\.]*)\..*$','\1',$_SERVER['HTTP_HOST']);
+$themeroot='r-forge.r-project.org/themes/rforge/';
+
+echo '<?xml version="1.0" encoding="UTF-8"?>;
+?>
+<!DOCTYPE html
 	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en   ">
@@ -11,6 +19,168 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>lpic</title>
 	<link href="http://r-forge.r-project.org/themes/rforge/styles/estilo1.css" rel="stylesheet" type="text/css" />
+  
+<style type="text/css">
+
+        html {
+            height: 100%;
+        }
+        
+        body {
+            background-color: inherit; 
+            color: inherit; 
+            font-family: Verdana; 
+            font-size: x-small; 
+            margin: 0; 
+            height: 100%;
+        
+        }
+        
+        a:active {
+            color: #CC0000; 
+        }
+        
+        a:link {
+            color: #CC0000; 
+        }
+        
+        a:visited {
+            color: #CC0000; 
+        }
+        
+        .msmMismatchAllele {
+            background-color: #CC0000;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .msmMissingAllele {
+            background-color: #FFCCCC;
+        }
+        
+        .msmInterpolatedAllele {
+            background-color: blue;
+            color: white;
+        }
+        
+        .msmGrid {
+            border-collapse: separate;
+        }
+        
+        .msmGridContent {
+            padding: 0;	
+            border: 1px solid #7EACB1; 			
+        }
+        
+
+        .msmGridUpperPanel, .msmGridLowerPanel {
+            padding: 3px;	
+            border-left: 0;
+            border-right: 0;	
+            background-color: #F4FAFB; 
+            color: #2A769D;	 
+            font-family: Verdana; 
+            font-size: x-small; 	
+        }
+        
+        .msmGridUpperPanel {
+            border-top: 0px;
+            border-bottom: 1px solid;
+            border-color: #7EACB1; 
+        }
+        
+        .msmGridMiddlePanel {
+            border: 0;	
+        }
+        
+        .msmGridLowerPanel {
+            border-top: 1px solid;
+            border-bottom: 0px; 
+            border-color: #C2D4DA; 
+        }
+        
+        .msmGridUpperPanel td, .msmGridLowerPanel td {
+            color: #2A769D;	 
+            font-family: Verdana; 
+            font-size: x-small; 		
+        }
+        
+        
+        .msmTable {
+            border: 0;
+            border-spacing: 0;
+            border-collapse: collapse;
+            empty-cells: show;
+            width: 100%;
+            font-family: Verdana; 
+            font-size: x-small; 			
+        }
+        
+        .msmTableSeparate {	
+            border-collapse: separate;		
+        }
+        
+        .msmTable td {
+            padding: 3px; 
+            border-bottom: 1px solid; 
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 1px solid; 
+            border-color: #C2D4DA;  
+            white-space:nowrap;
+        }
+        
+            
+        .msmTable .msmTableHeader, .msmTable .msmTableHeader td {
+            background-color: #B7D8DC;	
+            color: #000000; 
+            border-bottom: 1px solid; 
+            border-right: 1px solid; 
+            border-color: #7EACB1; 
+            background-repeat: repeat-x;		
+            vertical-align: top;
+            white-space:nowrap;
+        }
+        
+        .msmPointer {
+            cursor: pointer;
+        }
+        
+        
+        .msmTableHeaderBtn {
+            width: 100%;
+            font-family: Verdana; 
+            font-size: x-small; 		
+        }
+        
+        .msmTableHeader .msmTableHeaderBtn td {
+            background: transparent;
+            padding: 0;
+            border: 0;
+            white-space: nowrap;		
+        }
+        
+        .msmTableSelectRow {
+            background-color: #FFFF66; 
+            color: #000000;
+        }
+
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31755441-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
   </head>
 
 <body>
