@@ -40,11 +40,127 @@ while (!feof($handle)) {
 fclose($handle);
 echo $contents; } ?>
 
-<!-- end of project description -->
-
-<p> No content added. </p>
-
-<p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
-
+<div style="margin-left:5%; margin-right:5%"><br>
+        <table cellspacing="0" class="msmGrid">
+                <tr>
+                        <td class="msmGridContent">
+                                <div class="msmGridUpperPanel">
+                                        <div style="font-size:x-small;">
+                                                <table>
+                                                        <tr>
+                                                                <td style="width:500px;">
+                                                                <span style="font-size:18px;"><b>MatchImage package</b></span><br>
+                                                                
+                                                                <br><span style="font-size:12px;">
+                                                                <b>Likelihood-based photograph identification: application with photographs of free-ranging bison</b><br>
+                                                                <span style="font-size:9px;">Jerod A. Merkle<sup>1,2</sup>, Daniel Fortin<sup>1</sup><br>
+                                                                <sup>1</sup>Département de Biologie, Université Laval, Québec, Canada<br>
+                                                                <sup>2</sup>Email: <a href="mailto:jerod.merkle.1@ulaval.ca">jerod.merkle.1@ulaval.ca</a>, Web: <a href="http://www.cef-cfr.ca/">http://www.cef-cfr.ca/</a><br><br>
+                                                                </span>
+                                                                <br>
+                                                                Assigns animal ids to a database of photographs using phenotypic measurements of each photograph.   
+                                                                <br>
+                                                                <br>
+                                                                <span style="color:green; font-size=12pt">MatchImage now works correctly with R 3.0 and current versions of package jpeg.</span>
+                                                                <br>
+                                                                <br>
+                                                                <a href="MatchImage.pdf" target="_blank">Manual</a> (PDF)<br>
+                                                                <a href="https://r-forge.r-project.org/projects/lpic/" target="_blank">R-Forge project page</a><br><br>
+                                                                </span>
+                                                                </td>
+                                                        </tr>
+                                                </table>
+                                        </div>
+                                </div>
+                        </td>
+                </tr>
+        </table>
+        <br>
+        <br>
+        <span class="msmGridUpperPanel"><b><span style="font-size:18px;">Installation</span></b></span>
+        <br>
+        <br>
+        <table cellspacing="0" class="msmGrid">
+                <tr>
+                        <td class="msmGridContent">
+                                <div class="msmGridUpperPanel">
+                                        <span style="font-size:small;">STEP 1:  Install package dependencies</span>
+                                </div>
+                                <div class="msmGridMiddlePanel">
+                                        <table cellspacing="0" class="msmTable msmTableSeparate">
+                                                
+                                                <tr>
+                                                        
+                                                        <td width=500><span style="font-size:12px"><br>At the R prompt:<br>
+                                                        <strong><code>install.packages("ReadImages")<br>
+                                                                      </code></strong></span><br><br></td>
+                                                       
+                                                </tr>
+                                                <tr>
+                                                        <td width=500>jpeg is required.  <br>
+                                                        </td>
+                                                </tr>
+                                            
+                                        </table>
+                                </div>
+                        </td>
+                </tr>
+        </table>
+        <br>
+        <br>
+        <table cellspacing="0" class="msmGrid">
+                <tr>
+                        <td class="msmGridContent">
+                                <div class="msmGridUpperPanel">
+                                        <span style="font-size:small;">STEP 2:  Install MatchImage<br>...If you are using the most recent version of R...</span>
+                                </div>
+                                <div class="msmGridMiddlePanel">
+                                        <table cellspacing="0" class="msmTable msmTableSeparate">
+                                                
+                                                <tr>
+                                                        
+                                                        <td width=500><span style="font-size:12px"><br>At the R prompt:<br>
+                                                        <strong><code>install.packages("MatchImage", repos="http://R-Forge.R-project.org")</code></strong><br><br></span></td>
+                                                       
+                                                </tr>
+                                                <tr>
+                                                        <td width=500>R will download and install MatchImage from the R-forge repository.</td>
+                                                </tr>
+                                            
+                                        </table>
+                                </div>
+                        </td>
+                </tr>
+        </table>
+        <br>
+        <br>
+        <table cellspacing="0" class="msmGrid">
+                <tr>
+                        <td class="msmGridContent">
+                                <div class="msmGridUpperPanel">
+                                        <span style="font-size:small;">STEP 3:  Get started</span>
+                                </div>
+                                <div class="msmGridMiddlePanel">
+                                        <table cellspacing="0" class="msmTable msmTableSeparate">
+                                                
+                                               <tr>
+                                                        
+                                                    <td width=500><span style="font-size:12px"><br>1. At the R prompt:<br> 
+                                                    <strong><code>library(MatchImage)<br>
+                                                    ?MatchImage</code></span><br><br>
+                                                       
+                                                </tr>
+                                                <tr>
+                                                        <td width=500>Review the manual</td>
+                                                </tr>
+                                            
+                                        </table>
+                                </div>
+                        </td>
+                </tr>
+        </table>
+        <br>
+        <br>
+        </div>
 </body>
 </html>
