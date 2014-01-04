@@ -98,7 +98,10 @@ images corresponding to that image are copied into its respective folder.
 \author{
 Jerod A. Merkle (jerod.merkle.1@ulaval.ca)
 }
-
+\references{
+Merkle, J. A. and Fortin, D. (2013), Likelihood-based photograph identification: Application with 
+photographs of free-ranging bison. Wildlife Society Bulletin. doi: 10.1002/wsb.382
+}
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{

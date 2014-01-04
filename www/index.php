@@ -53,17 +53,19 @@ echo $contents; } ?>
                                                                 
                                                                 <br><span style="font-size:12px;">
                                                                 <b>Likelihood-based photograph identification: application with photographs of free-ranging bison</b><br>
+								<b>Wildlife Society Bulletin (2013), doi: 10.1002/wsb.382</b><br>
                                                                 <span style="font-size:9px;">Jerod A. Merkle<sup>1,2</sup>, Daniel Fortin<sup>1</sup><br>
-                                                                <sup>1</sup>Département de Biologie, Université Laval, Québec, Canada<br>
+                                                                <sup>1</sup>Departement de Biologie, Universite Laval, Quebec, Canada<br>
                                                                 <sup>2</sup>Email: <a href="mailto:jerod.merkle.1@ulaval.ca">jerod.merkle.1@ulaval.ca</a>, Web: <a href="http://www.cef-cfr.ca/">http://www.cef-cfr.ca/</a><br><br>
                                                                 </span>
                                                                 <br>
                                                                 Assigns animal ids to a database of photographs using phenotypic measurements of each photograph.   
                                                                 <br>
                                                                 <br>
-                                                                <span style="color:green; font-size=12pt">MatchImage now works correctly with R 3.0 and current versions of package jpeg.</span>
+                                                                <span style="color:green; font-size=12pt">MatchImage now works correctly with R 3.0.2 and current versions of package jpeg.</span>
                                                                 <br>
                                                                 <br>
+								<a href="http://onlinelibrary.wiley.com/doi/10.1002/wsb.382/abstract" target="_blank">Link to WSB article</a><br>
                                                                 <a href="MatchImage.pdf" target="_blank">Manual</a> (PDF)<br>
                                                                 <a href="https://r-forge.r-project.org/projects/lpic/" target="_blank">R-Forge project page</a><br><br>
                                                                 </span>
@@ -75,8 +77,6 @@ echo $contents; } ?>
                         </td>
                 </tr>
         </table>
-        <br>
-        <br>
         <span class="msmGridUpperPanel"><b><span style="font-size:18px;">Installation</span></b></span>
         <br>
         <br>
@@ -88,31 +88,25 @@ echo $contents; } ?>
                                 </div>
                                 <div class="msmGridMiddlePanel">
                                         <table cellspacing="0" class="msmTable msmTableSeparate">
-                                                
                                                 <tr>
                                                         
                                                         <td width=500><span style="font-size:12px"><br>At the R prompt:<br>
-                                                        <strong><code>install.packages("ReadImages")<br>
-                                                                      </code></strong></span><br><br></td>
+                                                        <strong><code>install.packages("jpeg")<br>
+                                                                      </code></strong></span></td>
                                                        
                                                 </tr>
-                                                <tr>
-                                                        <td width=500>jpeg is required.  <br>
-                                                        </td>
-                                                </tr>
-                                            
+                                           
                                         </table>
                                 </div>
                         </td>
                 </tr>
         </table>
         <br>
-        <br>
         <table cellspacing="0" class="msmGrid">
                 <tr>
                         <td class="msmGridContent">
                                 <div class="msmGridUpperPanel">
-                                        <span style="font-size:small;">STEP 2:  Install MatchImage<br>...If you are using the most recent version of R...</span>
+                                        <span style="font-size:small;">STEP 2:  Install MatchImage<br><br>...If you are using the most recent version of R...</span>
                                 </div>
                                 <div class="msmGridMiddlePanel">
                                         <table cellspacing="0" class="msmTable msmTableSeparate">
@@ -133,7 +127,6 @@ echo $contents; } ?>
                 </tr>
         </table>
         <br>
-        <br>
         <table cellspacing="0" class="msmGrid">
                 <tr>
                         <td class="msmGridContent">
@@ -145,7 +138,7 @@ echo $contents; } ?>
                                                 
                                                <tr>
                                                         
-                                                    <td width=500><span style="font-size:12px"><br>1. At the R prompt:<br> 
+                                                    <td width=500><span style="font-size:12px"><br>At the R prompt:<br> 
                                                     <strong><code>library(MatchImage)<br>
                                                     ?MatchImage</code></span><br><br>
                                                        
